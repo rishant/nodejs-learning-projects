@@ -24,3 +24,17 @@
 
 # 2. Object Relational Mapping [ORM] library [sequelize]
     https://www.youtube.com/watch?v=ExTZYpyAn6s
+
+# 3. command
+```
+    npm install cross-env
+    npm install mysql2
+    npm install sequelize
+    npm install dotenv
+    npm install
+
+    npm start
+    npm run dev
+    npm run qa
+    npm run prod
+```
