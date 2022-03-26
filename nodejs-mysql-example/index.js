@@ -12,49 +12,50 @@ async function curdCustomer() {
   await f.useDataBase();
   console.log("Helloworld 2")
 
-  // Database Selection
-  //f.connection.query(`USE ${config.mysql.databaseName}`, function (err, result) {
-  //  if (err) throw err;
-  //  console.log("Database Selected 2");
+  var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc 1', 'Highway 371')";
+  f.pool.execute(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted from Pool");
+  });
 
-    // Insert Record
-    var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
-    f.connection.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("1 record inserted");
-    });
+  // Insert Record
+  var sql = "INSERT INTO customers (name, address) VALUES ('Company Inc', 'Highway 37')";
+  f.connection.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("1 record inserted from connection");
+  });
 
-    // Select Records
-    f.connection.query("SELECT * FROM customers", function (err, result, fields) {
-      if (err) throw err;
-      console.log(result);
-    });
+  // Select Records
+  f.connection.query("SELECT * FROM customers", function (err, result, fields) {
+    if (err) throw err;
+    console.log(result);
+  });
 
-    // Select Records with where Condition
-    f.connection.query("SELECT * FROM customers WHERE name = 'Company Inc'", function (err, result) {
-      if (err) throw err;
-      console.log(result);
-    });
+  // Select Records with where Condition
+  f.connection.query("SELECT * FROM customers WHERE name = 'Company Inc'", function (err, result) {
+    if (err) throw err;
+    console.log(result);
+  });
 
-    // Update Records
-    var sql = "UPDATE customers SET name = 'Canyon 123' WHERE name = 'Company Inc'";
-    f.connection.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log(result.affectedRows + " record(s) updated");
-    });
+  // Update Records
+  var sql = "UPDATE customers SET name = 'Canyon 123' WHERE name = 'Company Inc'";
+  f.connection.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log(result.affectedRows + " record(s) updated");
+  });
 
-    // Delete
-    var sql = "DELETE FROM customers WHERE name = 'Company Inc'";
-    f.connection.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Number of records deleted: " + result.affectedRows);
-    });
+  // Delete
+  var sql = "DELETE FROM customers WHERE name = 'Company Inc'";
+  f.connection.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records deleted: " + result.affectedRows);
+  });
 
-    // Delete
-    var sql = "DELETE FROM customers WHERE name = 'Canyon 123'";
-    f.connection.query(sql, function (err, result) {
-      if (err) throw err;
-      console.log("Number of records deleted: " + result.affectedRows);
-    });
- // });
+  // Delete
+  var sql = "DELETE FROM customers WHERE name = 'Canyon 123'";
+  f.connection.query(sql, function (err, result) {
+    if (err) throw err;
+    console.log("Number of records deleted: " + result.affectedRows);
+  });
+
 }

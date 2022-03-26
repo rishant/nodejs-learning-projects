@@ -14,6 +14,14 @@ let connection = mysql.createConnection({
     //database: mysqlProperties.databaseName
 });
 
+let pool = mysql.createPool({
+    host: mysqlProperties.host,
+    user: mysqlProperties.user,
+    password: mysqlProperties.password,
+    database: mysqlProperties.databaseName
+});
+
+
 createDataBase = () => {
     return new Promise((resolve, reject) => {
         // Create Database
@@ -95,4 +103,4 @@ connection.connect((err) => {
     });
 });
 */
-module.exports = {connection, useDataBase};
+module.exports = {connection, pool, useDataBase};
