@@ -23,3 +23,4 @@
 ```
 
 # 2. Object Relational Mapping [ORM] library [sequelize]
+    https://www.youtube.com/watch?v=ExTZYpyAn6s
