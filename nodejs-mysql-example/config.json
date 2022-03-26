@@ -5,7 +5,7 @@
         "port" : 3306,
         "user" : "root",
         "password": "root",
-        "databaseName": "online-shoping" 
+        "databaseName": "online_shoping" 
     },
-    "mysqlURI": "mysql://root:root@localhost:3306/online-shoping"
+    "mysqlURI": "mysql://root:root@localhost:3306/online_shoping"
 }

@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "ORM ",
   "main": "index.js",
-  "scripts": {
+  "scripts": { 
+    "start": "node index.js",
+    "serve": "node index.js",
+    "dev": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/rishant/nodejs-learning-projects/issues"
   },
-  "homepage": "https://github.com/rishant/nodejs-learning-projects#readme"
+  "homepage": "https://github.com/rishant/nodejs-learning-projects#readme",
+  "dependencies": {
+    "mysql2": "^2.3.3"
+  }
 }
