@@ -1,0 +1,23 @@
+{
+  "name": "nodejs-mysql-orm-sequelize-example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=dev node index.js ",
+    "qa": "cross-env NODE_ENV=qa node index.js",
+    "stg": "cross-env NODE_ENV=stg node index.js",
+    "prod": "cross-env NODE_ENV=prod node index.js",
+    "start": "node index.js",
+    "serve": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "rishantgupta007@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.17.0"
+  }
+}
