@@ -12,8 +12,6 @@
   "author": "rishantgupta007@gmail.com",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.2",
-    "cors": "^2.8.5",
     "express": "^4.17.3",
     "express-react-views": "^0.11.0",
     "mongoose": "^6.2.8"
