@@ -7,7 +7,7 @@ Customer.hasMany(Order);
 
 let customerId = null;
 sequelize
-  .sync({force: true})
+  .sync({force: true}) // re-create table
   // .sync()
   .then((result) => {
     return Customer.create({name: "Chandler Bing", email: "cb@gmail.com"})

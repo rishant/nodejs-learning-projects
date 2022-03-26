@@ -24,6 +24,7 @@
 
 # 2. Object Relational Mapping [ORM] library [sequelize]
     https://www.youtube.com/watch?v=ExTZYpyAn6s
+    https://sequelize.org/master/index.html
 
 # 3. command
 ```
