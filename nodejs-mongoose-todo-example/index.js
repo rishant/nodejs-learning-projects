@@ -1,6 +1,9 @@
 const express = require('express')
 const app = express()
-const port = 13371;
+const path = require('path');
+const config = require(path.resolve(__dirname, 'config.json'));
+
+const port = config.applicationPort;
 
 // Define Function
 function bootApp(){
