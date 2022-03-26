@@ -14,6 +14,66 @@ let connection = mysql.createConnection({
     //database: mysqlProperties.databaseName
 });
 
+createDataBase = () => {
+    return new Promise((resolve, reject) => {
+        // Create Database
+        connection.query(`CREATE DATABASE IF NOT EXISTS ${mysqlProperties.databaseName}`, function (err, result) {
+            if (err) {
+                return reject(err);
+            }
+            return resolve(result);
+        });
+    });
+};
+
+useDataBase = () => {
+    return new Promise((resolve, reject) => {
+        // Use Database
+        connection.query(`USE ${mysqlProperties.databaseName}`, function (err, result) {
+            if (err) {
+                return reject(err);
+            }
+            return resolve(result);
+        });
+    });
+};
+
+createTable = () => {
+    return new Promise((resolve, reject) => {
+        // Create Table
+        var sql = "CREATE TABLE IF NOT EXISTS customers (name VARCHAR(255), address VARCHAR(255))";
+        connection.query(sql, function (err, result) {
+            if (err) {
+                return reject(err);
+            }
+            return resolve(result);
+        });
+    });
+};
+
+// async/await - way - implementation
+async function initDatabase() {
+    connection.connect(async (err) => {
+        if (err) throw err;
+        console.log('Connected to MySQL Server!');
+        try {
+            const result1 = await createDataBase();
+            console.log("Database created");
+            const result2 = await useDataBase();
+            console.log("Database Selected");
+            const result3 = await createTable();
+            console.log("Table created");
+    
+            // here you can do something with the three results    
+        } catch (error) {
+            console.log(error)
+        }
+    });
+}
+initDatabase();
+
+// Callback Handling - way - implementation
+/*
 connection.connect((err) => {
     if (err) throw err;
     console.log('Connected to MySQL Server!');
@@ -34,5 +94,5 @@ connection.connect((err) => {
         });
     });
 });
-
+*/
 module.exports = connection;
