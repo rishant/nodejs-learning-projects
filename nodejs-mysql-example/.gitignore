@@ -1,0 +1,2 @@
+## Ignore node_modules downloaded code for commit. Because this size is very huge.
+/node_modules

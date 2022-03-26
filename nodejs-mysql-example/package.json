@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-mysql-example",
+  "version": "1.0.0",
+  "description": "ORM ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishant/nodejs-learning-projects.git"
+  },
+  "author": "rishantgupta007@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rishant/nodejs-learning-projects/issues"
+  },
+  "homepage": "https://github.com/rishant/nodejs-learning-projects#readme"
+}
