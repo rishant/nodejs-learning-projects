@@ -5,6 +5,7 @@
 - NodeJS
 
 ## Project Folder Structure:
+```
 nodejs-mongoose-todo-example
 │   .gitignore
 │   config.json
@@ -29,6 +30,6 @@ nodejs-mongoose-todo-example
 │       database.js
 │
 └───views
-
+```
 ## Application start on below path
     http://localhost:13371/
