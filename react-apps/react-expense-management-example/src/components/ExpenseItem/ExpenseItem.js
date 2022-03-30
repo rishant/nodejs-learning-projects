@@ -23,11 +23,12 @@ class ExpenseItem extends React.Component {
     console.log(`componentDidUpdate ${prevState}`);
   }
 
+  /*
   shouldComponentUpdate(nextProps, nextState){
     console.log(`shouldComponentUpdate ${nextProps}`);
     console.log(`shouldComponentUpdate ${nextState}`);
   }
-
+  */
   componentDidCatch(error, info) {
     console.error(`componentDidCatch ${error}`);
     console.info(`componentDidCatch ${info}`);
