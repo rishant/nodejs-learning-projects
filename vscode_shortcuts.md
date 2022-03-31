@@ -7,3 +7,5 @@
 
 # Ctrl+d -> cursor-next-word selection.
 # Ctrl+Shift+L -> Multi-cursor-next-word. which will add a selection at each occurrence of the current selected text.
+
+A common way to add more cursors is with Ctrl+Alt+Down or Ctrl+Alt+Up that insert cursors below or above.
