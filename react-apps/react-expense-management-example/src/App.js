@@ -1,11 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
 import ExpenseItem from './components/ExpenseItem/ExpenseItem';
+import Summary from './components/Summary/Summary';
 import { useState } from 'react';
 
 function App() {
 
   const [myName, setMyName] = useState();
+
+  let expenseDate = new Date();
+  let expenseTitle = "Food Panda";
 
   const changeName = (event) => {
     console.log(event.target.value);
@@ -15,12 +18,15 @@ function App() {
   return (
     <div className="App">
       <h1>Learn React</h1>
-      <ExpenseItem/>
-
-      <h1>{ myName }</h1>
-      <input type='text' onChange={changeName}/>
+      <ExpenseItem expenseDate={expenseDate} expenseTitle={expenseTitle} />
+      <hr />
+      <h1>{myName}</h1>
+      <input type='text' onChange={changeName} />
+      <hr />
+      <Summary summaryId="#summaryId"/>
     </div>
   );
+
 }
 
 export default App;

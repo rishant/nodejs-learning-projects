@@ -3,9 +3,9 @@ import PropTypes from 'prop-types';
 import './ExpenseItem.css';
 
 class ExpenseItem extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {date: new Date()};
+    this.state = {samplemessage: "Hi Expense System"};
   }
 
   componentWillUnmount() {
@@ -18,7 +18,7 @@ class ExpenseItem extends React.Component {
     console.log(`#componentDidMount`);
   }
 
-  componentDidUpdate(prevProps, prevState){
+  componentDidUpdate(prevProps, prevState) {
     console.log(`componentDidUpdate ${prevProps}`);
     console.log(`componentDidUpdate ${prevState}`);
   }
@@ -44,17 +44,18 @@ class ExpenseItem extends React.Component {
     if (this.state.hasError) {
       // You can render any custom fallback UI
       return <h1>Something went wrong.</h1>;
-    } 
-    return (  
+    }
+    return (
       <div className="ExpenseItem">
         ExpenseItem Component
         <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-    </div>
+          <h1>Hello, world!</h1>
+          <h2>It is {this.props.expenseDate.toLocaleString()}.</h2>
+          <h3>{this.props.expenseTitle}</h3>
+        </div>
       </div>
     );
   }
 }
- 
+
 export default ExpenseItem;
