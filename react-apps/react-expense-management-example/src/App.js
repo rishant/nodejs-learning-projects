@@ -1,6 +1,8 @@
 import './App.css';
 import ExpenseItem from './components/ExpenseItem/ExpenseItem';
 import Summary from './components/Summary/Summary';
+import Todo from './components/Todo/Todo';
+
 import { useState } from 'react';
 
 function App() {
@@ -24,6 +26,7 @@ function App() {
       <input type='text' onChange={changeName} />
       <hr />
       <Summary summaryId="#summaryId"/>
+      <Todo/>
     </div>
   );
 
